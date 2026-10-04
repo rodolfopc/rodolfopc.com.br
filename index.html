@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f2ec">
+    <meta name="description" content="Conheça o trabalho de Rodolfo Coelho e entre em contato por e-mail.">
+    <title>Rodolfo Coelho — Trabalho e contato</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f2ec;
+        --ink: #1e2723;
+        --muted: #59645d;
+        --green: #245b46;
+        --line: #d8d9cf;
+        font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(ellipse at 85% 8%, rgba(190, 205, 172, .42), transparent 32rem),
+          var(--paper);
+      }
+
+      .page {
+        width: min(100% - 3rem, 1120px);
+        min-height: 100vh;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 2rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .identity, .section-label {
+        font-size: .78rem;
+        font-weight: 700;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .identity { color: var(--green); }
+      .section-label { color: var(--muted); }
+
+      main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(230px, .6fr);
+        align-items: center;
+        gap: clamp(3rem, 10vw, 9rem);
+        padding-block: clamp(5rem, 14vh, 10rem);
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 1.25rem 0 1.5rem;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.5rem, 8.5vw, 7.5rem);
+        font-weight: 400;
+        letter-spacing: -.065em;
+        line-height: .98;
+      }
+
+      .intro {
+        max-width: 35rem;
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        line-height: 1.7;
+      }
+
+      .contact {
+        padding: 1.75rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, .48);
+      }
+
+      .contact p {
+        margin: 0 0 1.25rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .contact a {
+        display: inline-flex;
+        align-items: center;
+        gap: .7rem;
+        color: var(--green);
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration-thickness: 1px;
+        text-underline-offset: .25em;
+        overflow-wrap: anywhere;
+      }
+
+      .contact a:focus-visible {
+        outline: 3px solid #bd642e;
+        outline-offset: 5px;
+        border-radius: 2px;
+      }
+
+      footer {
+        padding-block: 1.5rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: .85rem;
+      }
+
+      @media (max-width: 700px) {
+        .page { width: min(100% - 2rem, 560px); }
+        header { padding-block: 1.25rem; }
+        main {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          padding-block: 5rem;
+        }
+        h1 { font-size: clamp(3.5rem, 17vw, 6rem); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="identity">Rodolfo Coelho</div>
+        <div class="section-label">Trabalho &amp; contato</div>
+      </header>
+
+      <main>
+        <section aria-labelledby="intro-title">
+          <div class="section-label">Apresentação</div>
+          <h1 id="intro-title">Olá, sou Rodolfo.</h1>
+          <p class="intro">Este é um espaço para apresentar meu trabalho e conectar pessoas interessadas em conversar.</p>
+        </section>
+
+        <aside class="contact" aria-label="Contato por e-mail">
+          <div class="section-label">Vamos conversar?</div>
+          <p>Para saber mais ou entrar em contato, escreva para mim.</p>
+          <a href="mailto:rodolfopc@gmail.com">rodolfopc@gmail.com <span aria-hidden="true">↗</span></a>
+        </aside>
+      </main>
+
+      <footer>© Rodolfo Coelho</footer>
+    </div>
+  </body>
+</html>
