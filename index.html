@@ -54,6 +54,14 @@
 
       .identity { color: var(--green); }
       .section-label { color: var(--muted); }
+      .identity a { color: inherit; text-decoration: none; }
+
+      nav a {
+        color: var(--green);
+        font-size: .9rem;
+        font-weight: 700;
+        text-underline-offset: .25em;
+      }
 
       main {
         flex: 1;
@@ -113,6 +121,24 @@
         border-radius: 2px;
       }
 
+      a:focus-visible {
+        outline: 3px solid #bd642e;
+        outline-offset: 5px;
+        border-radius: 2px;
+      }
+
+      .project {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 0 2rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .project img { width: 56px; height: 56px; border-radius: 14px; }
+      .project p { margin: .35rem 0 0; color: var(--muted); line-height: 1.5; }
+      .project a { color: var(--green); font-weight: 700; text-underline-offset: .25em; }
+
       footer {
         padding-block: 1.5rem;
         border-top: 1px solid var(--line);
@@ -135,8 +161,8 @@
   <body>
     <div class="page">
       <header>
-        <div class="identity">Rodolfo Coelho</div>
-        <div class="section-label">Trabalho &amp; contato</div>
+        <div class="identity"><a href="./">Rodolfo Coelho</a></div>
+        <nav aria-label="Navegação principal"><a href="servdia/">ServDia ↗</a></nav>
       </header>
 
       <main>
@@ -152,6 +178,14 @@
           <a href="mailto:rodolfopc@gmail.com">rodolfopc@gmail.com <span aria-hidden="true">↗</span></a>
         </aside>
       </main>
+
+      <section class="project" aria-label="Projeto em destaque">
+        <img src="servdia/assets/icone.png" alt="Ícone do ServDia" width="56" height="56">
+        <div>
+          <a href="servdia/">Conheça o ServDia ↗</a>
+          <p>Um app para organizar clientes, serviços, orçamentos e pagamentos.</p>
+        </div>
+      </section>
 
       <footer>© Rodolfo Coelho</footer>
     </div>
